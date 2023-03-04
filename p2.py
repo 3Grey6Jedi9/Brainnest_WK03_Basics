@@ -14,9 +14,16 @@ def tasks02():
 print(tasks02())
 
 
-def csv_to_dict:
-    pass
+cfile = 'csvsample.csv'
 
+
+with open(cfile, newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    data = {}
+    for row in reader:
+        data[row['name']] = row
+
+print(data)
 
 
 
